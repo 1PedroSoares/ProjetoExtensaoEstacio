@@ -1,0 +1,5 @@
+SELECT M.nome, E.data_evento, E.horario_evento
+FROM Musicos M
+JOIN Escala S ON M.id_musico = S.id_musico
+JOIN Eventos E ON S.id_evento = E.id_evento
+WHERE E.id_evento = $id ;
